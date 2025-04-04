@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sree Alekhya Teerthala</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Centa:wght@400;600&display=swap" rel="stylesheet">
+
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Centa', sans-serif;
             background-color: white;
             color: black;
             margin: 0;
@@ -25,6 +29,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: color 0.3s, transform 0.3s ease; /* Smooth transition for color and transform */
         }
         nav a {
             color: white;
@@ -32,7 +37,18 @@
             text-decoration: none;
             font-size: 18px;
             text-transform: uppercase;
+            font-family: 'Centa', sans-serif;
         }
+        /* Navbar link hover effect */
+        nav a:hover {
+            color: #d5c2f2; /* Change text color on hover (you can pick any color) */
+            font-weight: bold; /* Make text bold on hover */
+            font-size: 1 rem; /* Increase the font size when hovered */
+            transition: color 0.3s ease; /* Smooth color transition */
+
+        }
+
+
         nav .name {
             float: left;
             margin-left: 20px;
@@ -43,6 +59,10 @@
         nav a:last-child {
             margin-right: 50px; /* Add space on the right of the "Resume" link */
         }
+        html {
+            scroll-behavior: smooth; /* Enables smooth scroll */
+        }
+
         .container, .section {
             display: flex;
             flex-direction: column;
@@ -282,14 +302,13 @@
             margin-left: -20%; /* Adjust to align with the rest of the website */
             margin-right: -20%; /* Adjust to align with the rest of the website */
         }
-        .footer {
+       .footer {
             text-align: center;
             font-size: 14px;
             margin-top: 50px;
-            color: #666;  /* Subtle gray color */
+            color: #666;   
             padding: 0px 0;
         }
-
         .resume-button-container {
             margin-top: 20px; /* Space between SVG icons and the button */
             text-align: left; /* Centers the button */
@@ -322,10 +341,57 @@
             width: 40px; /* Adjust size as needed */
             height: 40px;
         }
+        .skills-grid-top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px; /* Space between side-by-side boxes */
+        justify-items: center;
+        width: 100%;
+        margin-bottom: 40px; /* Space below the top two boxes */
+        }
 
+        .skill-box {
+        padding: 20px;
+        border: 1px solid #7044b3;
+        text-align: left;
+        font-weight: bold;
+        background-color: #f9f9f9;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        max-width: 450px;
+        position: relative;
+        border-radius: 10px;
+        }
 
+        .skill-box:hover {
+        background-color: #d5c2f2;
+        box-shadow: 5px 5px 15px #7044b3;
+        transform: scale(1.05);
+        }
 
+        .skill-box a {
+        text-decoration: none;
+        display: block;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 18px;
+        color: var(--pinkish-blue);
+        font-weight: bold;
+        }
 
+        .skill-box a ul {
+        font-size: 16px;
+        color: black;
+        font-weight: 600;
+        }
+
+        /* Center the third box */
+        .center-box {
+        display: flex;
+        justify-content: left;
+        margin: 0 auto;
+        }
 
 
     </style>
@@ -337,6 +403,7 @@
         <a href="#home">HOME</a>
         <a href="#projects">PROJECTS</a>
         <a href="#achievements">ACHIEVEMENTS</a>
+        <a href="#skills">SKILLS</a>
         <a href="#about">ABOUT ME</a>
         
     </nav>
@@ -351,7 +418,7 @@
             <a href="https://tryhackme.com/p/tsreealekhya12" target="_blank"><img src="tryhackme.svg" alt="Custom Emoji" class="emoji-icon"></a>
             <a href="https://github.com/Sree-Alekhya" target="_blank"><img src="github.svg" alt="Custom Emoji" class="emoji-icon"></a>
             <div class="resume-button-container">
-                <a href="https://drive.google.com/file/d/1vXROQueA2uk6o2rDMGmLEwdt_nLz_F4n/view?usp=sharing" target="_blank">
+                <a href="https://drive.google.com/file/d/1qgleUO3QpoaMeOyQ3gE1R5gslC5Ja2pm/view?usp=sharing" target="_blank">
                     <button class="resume-button">Resume</button>
                 </a>
             </div>
@@ -394,6 +461,55 @@
             <div class="achievement-box"><a href=https://drive.google.com/file/d/1s9XVYdu67AzSogm2wTh8dTtDNRej1a-M/view?usp=sharing target="_blank">CyberSeed 2024<ul><li>Capture The Flag (CTF) competition organized by UCONN and Synchrony. </li><li>Ranked 23rd among 160+ teams; completed 87% of challenges.</li></ul></a></div>            
             <div class="achievement-box"><a href=https://link.springer.com/chapter/10.1007/978-981-99-7954-7_15%20 target="_blank">Secure Software Development LifeCycle<ul><li>Presented paper in the 2nd International Conference on Computational Intelligence in Machine Learning (ICCIML) Conference and published in the Springer Journal.</li></ul></a></div>
         </div>
+        <section id="skills" class="section">
+            <h1>SKILLS</h1>
+            <h3>From fundamentals to finesse - here's what I bring to the table!</h3>
+            <div class="skills-grid-top">
+              <div class="skill-box">
+                <a href="#">
+                  <h3>Tools</h3>
+                  <ul>
+                    <li>Metasploit</li>
+                    <li>Wireshark</li>
+                    <li>Nmap</li>
+                    <li>Snort</li>
+                    <li>John the Ripper</li>
+                    <li>GoPhish</li>
+                    <li>Cisco Packet Tracer</li>
+                    <li>Burp Suite</li>
+                    <li>FTK Imager</li>
+                  </ul>
+                </a>
+              </div>
+          
+              <div class="skill-box">
+                <a href="#">
+                  <h3>Technical Interests</h3>
+                  <ul>
+                    <li>Vulnerability Assessment</li>
+                    <li>Risk Assessment</li>
+                    <li>Identity and Access Management</li>
+                    <li>Network Security</li>
+                    <li>Incident Response</li>
+                    <li>Governance, Risk and Compliance</li>
+                  </ul>
+                </a>
+              </div>
+            </div>
+          
+            <div class="skill-box center-box">
+              <a href="#">
+                <h3>Languages</h3>
+                <ul>
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>SQL</li>
+                </ul>
+              </a>
+            </div>
+          </section>
+          
+  
         <div class="section" id="about">
             <h1>ABOUT ME</h1>
             <div class="about-container">
@@ -401,7 +517,7 @@
                     <img src="me.jpeg" alt="Sree Alekhya Teerthala" class="about-img">
                 </div>
                 <div class="about-text">
-                    <p>I’m Alekhya, a security engineer with a knack for untangling complex challenges and building solutions that keep systems secure. It's not just about the tech - it's about the challenge, the process, and constantly asking "what's next?".</p><p>Outside of work, I'm passionate about sketching, singing, and soaking in the rich world of Indian music and movies. I believe that creativity and tech go hand in hand, and I'm always looking for new ways to blend the two in everything I do.</p>
+                    <p>A security engineer with a knack for untangling complex challenges and building solutions that keep systems secure. It's not just about the tech - it's about the challenge, the process, and constantly asking "what's next?".</p><p>Outside of work, I'm passionate about sketching, singing, and soaking in the rich world of Indian music and movies. I believe that creativity and tech go hand in hand, and I'm always looking for new ways to blend the two in everything I do.</p>
                     
                     <!-- Dropdown for Security Questions -->
                     <label for="security-question">Please select a security question:</label>
@@ -409,12 +525,14 @@
                         <option value="">Select a question</option>
                         <option value="color">If your life had a theme color, what would it be? </option>
                         <option value="movie">If life had a background movie, what would it be?</option>
-                        <option value="food">What's always a “yes” on the menu?</option>
+                        <option value="food">What's always a "yes" on the menu?</option>
                     </select>
                     
                     <div id="answer"></div>
                 </div>
             </div>
+
+
 
         <div class="about-icons">
             <a href="mailto:tsreealekhya12@gmail.com"><img src="email.svg" alt="Email" class="emoji-icon"></a>
@@ -422,6 +540,8 @@
             <a href="https://tryhackme.com/p/tsreealekhya12" target="_blank"><img src="tryhackme.svg" alt="TryHackMe" class="emoji-icon"></a>
             <a href="https://github.com/Sree-Alekhya" target="_blank"><img src="github.svg" alt="GitHub" class="emoji-icon"></a>
         </div>
+
+
         
         <!-- Footer Section -->
         <footer class="footer">
@@ -446,7 +566,7 @@
 
     <script>
 
-        const words = ["A Security Engineer!", "CTRL + ALT + DEFEND!", " A Cybersecruity Grad!"];
+        const words = ["A Security Engineer!", "CTRL + ALT + DEFEND!", " A Cybersecurity Grad!"];
         let wordIndex = 0;
         let charIndex = 0;
         let typingElement = document.getElementById("dynamic-text");
