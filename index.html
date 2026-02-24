@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sree Alekhya Teerthala</title>
-   
-    <link href="https://fonts.googleapis.com/css2?family=Centa:wght@400;600&display=swap" rel="stylesheet">
-
-
     <style>
         body {
-            font-family: 'Centa', sans-serif;
-            background-color: white;
-            color: black;
+            font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            font-size: 18px;                    
+            font-weight: 400;                   
+            line-height: 1.6;                   
             margin: 0;
             padding: 0;
+            background-image: url("Background.jpeg"); 
+            background-size: cover;         
+            background-position: center;    
+            background-repeat: no-repeat;
+            background-attachment: fixed;    
         }
         nav {
-            background: #7044b3;
+            background: linear-gradient(
+            to bottom,
+            #7f53c1 0%,
+            #7f53c1 50%,
+            rgba(127, 83, 193, 0.85) 100%
+            );
             color: white;
-            padding: 15px;
+            padding: 20px;
             text-align: right;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
-            z-index: 1000; /* Ensure navbar stays above content */
+            z-index: 1000; 
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: color 0.3s, transform 0.3s ease; /* Smooth transition for color and transform */
+            transition: color 0.3s, transform 0.3s ease; 
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: 500;    
+            letter-spacing: 0.5px;
             text-transform: uppercase;
-            font-family: 'Centa', sans-serif;
+            font-family: inherit;
         }
-        /* Navbar link hover effect */
+        
         nav a:hover {
-            color: #d5c2f2; /* Change text color on hover (you can pick any color) */
-            font-weight: bold; /* Make text bold on hover */
-            font-size: 1 rem; /* Increase the font size when hovered */
-            transition: color 0.3s ease; /* Smooth color transition */
+            color: #d5c2f2; 
+            font-weight: bold; 
+            transition: color 0.3s ease; 
 
         }
 
@@ -53,37 +62,27 @@
             float: left;
             margin-left: 20px;
             margin-right: auto;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 20px;
+            font-weight: 700;
         }
         nav a:last-child {
-            margin-right: 50px; /* Add space on the right of the "Resume" link */
+            margin-right: 50px; 
         }
         html {
-            scroll-behavior: smooth; /* Enables smooth scroll */
-        }
-
-        .container, .section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 1000px;
-            margin: 100px auto;
-            padding: 20px;
-            text-align: center;
+            scroll-behavior: smooth; 
         }
         .hero {
             display: flex;
-            flex-direction: row; /* Align items side by side */
-            justify-content: center; /* Creates space between text and image */
+            flex-direction: row; 
+            justify-content: center; 
             gap: 70px;
-            align-items: center; /* Aligns items vertically */
+            align-items: center; 
             width: 100%;
             height: 100vh;
             max-width: 1200px;
-            margin: 0 auto; /* Reduced the top and bottom margin */
+            margin: 0 auto; 
             text-align: left;
-            /*border: 2px solid red;*/
+            
         }
 
         .text-section {
@@ -92,8 +91,8 @@
         }
 
         .photo-section {
-            width: 500px; /* Adjusted width for a smaller photo section */
-            height: 100px; /* Adjusted height accordingly */
+            width: 500px; 
+            height: 100px; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -102,18 +101,17 @@
 
         .profile-img {
             width: 100%;
-            max-width: 150 px;
-            height: 100 px;
             object-fit: cover;
             border-radius: 50%;
         }
 
         .title {
-            font-size: 46px;
-            font-weight: bold;
+            font-size: 55px;
+            font-weight: 700;
         }
         .subtitle {
             font-size: 28px;
+            font-weight: 500;
             color: #7044b3;
             margin-top: 10px;
             display: flex;
@@ -131,139 +129,143 @@
         @keyframes blink {
             50% { border-color: transparent; }
         }
-        .project-container, .achievement-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
+ 
 
         .section {
             display: flex;
             flex-direction: column;
             align-items: center;
             max-width: 1000px;
-            margin: 100px auto;
+            margin: 60px auto;
             padding: 20px;
             text-align: center;
             position: relative;
-            padding-top: 120px; /* Space added to avoid overlap with navbar */
-            z-index: 0; /* Ensure content is below the navbar */
+            padding-top: 110px; 
+            z-index: 0; 
         }
 
         .project-container, .achievement-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
-            gap: 50px; /* Space between boxes */
-            justify-items: center; /* Center the boxes */
-            width: 100%; /* Full width */
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 50px; 
+            justify-items: center; 
+            width: 100%; 
         }
 
         .project-box, .achievement-box {
             padding: 20px;
             border: 1px solid #7044b3;
             text-align: left;
-            font-weight: bold;
-            background-color: #f9f9f9;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: #f8eefa;
             transition: all 0.3s ease-in-out;
             width: 100%;
-            max-width: 450px; /* Limit width for each box */
+            max-width: 450px; 
             position: relative;
-            border-radius: 10px; /* Add this line to make the corners rounded */
+            border-radius: 10px; 
         }
 
         .project-box:hover, .achievement-box:hover {
             background-color: #d5c2f2;
-            box-shadow: 5px 5px 15px  #7044b3;
+            box-shadow: 5px 5px 15px  #8150ca;
             transform: scale(1.05);
         }
         :root {
-            --pinkish-blue: #7044b3; /* Pinkish-blue shade */
+            --pinkish-blue: #7044b3; 
         }
-
+        h1 {
+        font-size: 45px;
+        font-weight: 750;
+        letter-spacing: 1px;
+        }
         h3 {
-            color: var(--pinkish-blue); /* Apply pinkish-blue shade to section titles */
+        color: var(--pinkish-blue); 
+            font-size: 28px;   
+            font-weight: 650;  
+        }
+        
+        .section h1 {
+        margin: 0 0 15px 0;     
+        line-height: 1.15;
         }
 
-        /* Adjust link padding inside boxes */
+        
         .project-box a, .achievement-box a {
             text-decoration: none;
-            /*color: black;*/
             display: block;
             height: 100%;
             padding: 10px;
             box-sizing: border-box;
-            font-size: 18px;
-            color: var(--pinkish-blue); /* Apply pinkish-blue color to project titles */
-            font-weight: bold;
+            font-size: 20px;
+            color: var(--pinkish-blue); 
+            font-weight: 700;
         }
-        /* Scroll down arrow styles */
+        
         .scroll-down-arrow {
             position: absolute;
-            bottom: 20px; /* Adjust the position of the arrow */
+            bottom: 20px; 
             left: 50%;
-            transform: translateX(-50%); /* Center the arrow horizontally */
+            transform: translateX(-50%); 
             cursor: pointer;
         }
 
-        /* Styling for the arrow link */
+        
         .arrow-link {
             text-decoration: none;
-            color:  #7044b3;  /* Color for the arrow */
+            color:  #7044b3;  
             font-size: 2rem;
             font-weight: bold;
             transition: transform 0.3s ease;
         }
 
-        /* Hover effect for arrow */
+        
         .arrow-link:hover {
-            transform: translateY(5px);  /* Slight downward movement on hover */
+            transform: translateY(5px);  
         }
 
-        /* Arrow symbol */
+        
         .arrow-link span {
-            font-size: 40px;  /* Adjust size of arrow */
+            font-size: 40px;  
         }
         .emoji-icon {
-            width: 30px; /* Adjust size as needed */
+            width: 30px; 
             height: 30px;
             margin: 0 10px;
         }
 
         .project-box a ul, .achievement-box a ul {
-            font-size: 16px;
-            color: black; /* Ensure the content inside the <ul> list is black (default color) */
+            font-size: 18px;
+            color: black; 
             font-weight: 600;
         }
 
         .about-container {
             display: flex;
-            justify-content: space-between;
-            gap: 30px;
-            align-items: center;
-            padding: 20px;
-            max-width: 2000px; /* Adjust this width to align with other sections */
-            margin: 0 auto; /* Center the section */
+            align-items: flex-start;      
+            justify-content: center;      
+            gap: 60px;                    
+            padding: 40px 20px;
+            max-width: 1100px; 
+            margin: 0 auto; 
         }
 
         .about-photo {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: center;   
+            padding-left: 0;           
         }
 
         .about-img {
-            width: 300px;  /* Adjust as needed */
-            height: 500px; /* Rectangle shape */
+            width: 320px;  
+            height: auto; 
+            border-radius: 20px;
             object-fit: cover;
-            border-radius: 10%;
-            margin-right: 20px;
 
         }
 
         .about-text {
-            flex: 2;
+            width: 100%;
+            max-width: 800px;
             font-size: 20px;
             font-weight: 500;
             text-align: left;
@@ -275,7 +277,7 @@
             font-weight: 600;
             margin-top: 20px;
             display: block;
-            color:black; /* Set color for label */
+            color:black; 
         }
 
         select {
@@ -284,78 +286,79 @@
             padding: 10px;
             width: 100%;
             max-width: 300px;
-            color: #513e7a; /* Set color for dropdown text */
-            background-color: #f2f2f2; /* Set background color for dropdown */
-            border: 2px solid #5f4b8b; /* Border color */
+            color: #513e7a; 
+            background-color: #f6f1f7; 
+            border: 2px solid #5f4b8b; 
         }
 
         #answer {
             font-size: 20px;
             font-weight: 600;
-            margin-top: 15px;  /* Add space between question and answer */
+            margin-top: 15px;  
             color:#7044b3;
             font-weight: bold;
         }
 
-        /* Optional: Adjust margin of About Me section */
+       
         #about {
-            margin-left: -20%; /* Adjust to align with the rest of the website */
-            margin-right: -20%; /* Adjust to align with the rest of the website */
+            margin: 0 auto;
+            max-width: 2000px;
         }
        .footer {
             text-align: center;
             font-size: 14px;
-            margin-top: 50px;
+            margin-top: 60px;
             color: #666;   
-            padding: 0px 0;
+            padding: 20px 0;
         }
         .resume-button-container {
-            margin-top: 20px; /* Space between SVG icons and the button */
-            text-align: left; /* Centers the button */
+            margin-top: 20px; 
+            text-align: left; 
         }
 
         .resume-button {
-            background-color: #7044b3; /* Pinkish shade */
+            background-color: #7044b3; 
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 15px 25px;
+            font-size: 23px;
             font-weight: bold;
             border-radius: 10px;
             cursor: pointer;
             transition: 0.3s ease-in-out;
-            display: inline-block; /* Ensures proper alignment */
+            display: inline-block; 
         }
 
         .resume-button:hover {
-            background-color: #5f4b8b; /* Light blue */
+            background-color: #5f4b8b; 
         }
         .about-icons {
             display: flex;
-            gap: 15px; /* Adjust spacing between icons */
-            justify-content: center; /* Center align */
-            margin-top: 10px; /* Space above the icons */
+            gap: 18px; 
+            justify-content: center; 
+            margin-top: 40px; 
         }
 
         .emoji-icon {
-            width: 40px; /* Adjust size as needed */
+            width: 40px; 
             height: 40px;
         }
         .skills-grid-top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 60px; /* Space between side-by-side boxes */
+        gap: 60px; 
         justify-items: center;
         width: 100%;
-        margin-bottom: 40px; /* Space below the top two boxes */
+        margin-bottom: 40px; 
         }
 
         .skill-box {
         padding: 20px;
         border: 1px solid #7044b3;
         text-align: left;
-        font-weight: bold;
-        background-color: #f9f9f9;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: #f8eefa;
         transition: all 0.3s ease-in-out;
         width: 100%;
         max-width: 450px;
@@ -365,7 +368,7 @@
 
         .skill-box:hover {
         background-color: #d5c2f2;
-        box-shadow: 5px 5px 15px #7044b3;
+        box-shadow: 5px 5px 15px  #8150ca;
         transform: scale(1.05);
         }
 
@@ -373,20 +376,20 @@
         text-decoration: none;
         display: block;
         height: 100%;
-        padding: 10px;
+        padding: 20px;
         box-sizing: border-box;
-        font-size: 18px;
+        font-size: 20px;
+        font-weight: 700;
         color: var(--pinkish-blue);
-        font-weight: bold;
         }
 
         .skill-box a ul {
-        font-size: 16px;
+        font-size: 18px;
         color: black;
         font-weight: 600;
         }
 
-        /* Center the third box */
+        
         .center-box {
         display: flex;
         justify-content: left;
@@ -394,15 +397,145 @@
         }
 
 
+
+        .exp-row{
+        width: 100%;
+        max-width: 1000px;          
+        margin: 80px auto 40px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+
+        gap: 60px;
+        position: relative;
+
+        flex-wrap: nowrap;          
+        }
+
+        .exp-row::before{
+        content:"";
+        position:absolute;
+        top:-30px;
+        left:10%;
+        width:80%;                 
+        height:4px;
+        background:#cbb6ea;
+        border-radius:999px;
+        }
+
+        .exp-box{
+        flex: 1 1 0;                
+        min-width: 380px;           
+        max-width: 460px;           
+
+        background:#f8eefa;
+        border:1px solid #7044b3;
+        border-radius:14px;
+        padding:24px;
+        text-align:left;
+        position:relative;
+        transition:all .25s ease;
+        }
+
+
+        .exp-box:hover{
+        background:#d5c2f2;
+        box-shadow:0 8px 24px rgba(112,68,179,.25);
+        transform:translateY(-6px);
+        }
+
+
+        .exp-marker{
+        position:absolute;
+        top:-38px;
+        left:50%;
+        transform:translateX(-50%);
+        width:14px;
+        height:14px;
+        background:#7044b3;
+        border-radius:50%;
+        box-shadow:0 0 0 6px rgba(112,68,179,.15);
+        }
+
+
+        .exp-marker-present{
+        animation:pulse 1.6s infinite ease-in-out;
+        }
+
+        @keyframes pulse{
+        0%,100%{transform:translateX(-50%) scale(1);}
+        50%{transform:translateX(-50%) scale(1.25);}
+        }
+
+
+        .exp-present{
+        position:absolute;
+        top:-34px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:11px;
+        font-weight:700;
+        padding:5px 12px;
+        border-radius:999px;
+        background:#f3e9ff;
+        border:1px solid #7044b3;
+        white-space:nowrap;
+        }
+
+
+        .exp-logo{
+        width:52px;
+        height:52px;
+        object-fit:contain;
+        margin-bottom:10px;
+        }
+
+
+        .exp-box h2{
+        margin:6px 0;
+        font-size:22px;
+        color:#7044b3;
+        }
+
+        .exp-meta{
+        font-weight:600;
+        opacity:.7;
+        margin-bottom:10px;
+        }
+
+        .exp-box li{
+        font-size:18px;
+        font-weight:600; /*hereeeeeeeeeeeee*/
+        margin-bottom:6px;
+        }
+
+        @keyframes expPulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        }
+
+        @media (max-width: 900px){
+        .exp-row{
+            flex-wrap: wrap;          
+        }
+        .exp-box{
+            min-width: 100%;
+            max-width: 100%;
+        }
+        }
+
     </style>
 </head>
+
 <body>
     <nav>
         <a href="#home" class="name">SREE ALEKHYA TEERTHALA</a>
-        <a href="https://drive.google.com/file/d/1qgleUO3QpoaMeOyQ3gE1R5gslC5Ja2pm/view?usp=sharing" target="_blank">RESUME</a> 
+        <a href="https://drive.google.com/file/d/1eOPlXSoo-P72ylbG40vgiyhc_eN6qOkA/view?usp=sharing" target="_blank">RESUME</a> 
         <a href="#home">HOME</a>
         <a href="#projects">PROJECTS</a>
         <a href="#achievements">ACHIEVEMENTS</a>
+        <a href="#experience">EXPERIENCE</a>
         <a href="#skills">SKILLS</a>
         <a href="#about">ABOUT ME</a>
         
@@ -418,7 +551,7 @@
             <a href="https://tryhackme.com/p/tsreealekhya12" target="_blank"><img src="tryhackme.svg" alt="Custom Emoji" class="emoji-icon"></a>
             <a href="https://github.com/Sree-Alekhya" target="_blank"><img src="github.svg" alt="Custom Emoji" class="emoji-icon"></a>
             <div class="resume-button-container">
-                <a href="https://drive.google.com/file/d/1qgleUO3QpoaMeOyQ3gE1R5gslC5Ja2pm/view?usp=sharing" target="_blank">
+                <a href="https://drive.google.com/file/d/1eOPlXSoo-P72ylbG40vgiyhc_eN6qOkA/view?usp=sharing" target="_blank">
                     <button class="resume-button">Resume</button>
                 </a>
             </div>
@@ -444,30 +577,77 @@
         <h3>Breaking, fixing, and securing - one project at a time!</h3>
         <div class="project-container">
     
-            <div class="project-box"><a href=https://drive.google.com/file/d/1AJzeyM8matXiRxGMdK2WwYtYiAAarlpl/view?usp=drive_link target="_blank">Enhancing Digital Twin Security Through Partial Homomorphic Encryption<ul><li>Designed a proof-of-concept model using ElGamal encryption.</li><li>Secured sensitive healthcare data via encrypted computations.</li></ul></a></div>
-            <div class="project-box"><a href=#>The Quantum Periodic Cipher: Merging Elements and Quantum Numbers for Covert Channels<ul><li>Designed a covert messaging technique using chemistry-related Reddit posts.</li><li>Embedded hidden messages by encoding quantum numbers and element symbols.</li></ul></a></div>
-            <div class="project-box"><a href=https://drive.google.com/file/d/1yoOHKvKGi3yeT50ZTKL4qKVQXu0d4wt8/view?usp=drive_link target="_blank">Impact of social engineering on Trojan Attacks<ul><li>Analyzed real-world Trojan attacks (Stuxnet, Operation Shady RAT) and the role of social engineering.</li><li>Identified patterns in phishing, USB infections, and human manipulation, highlighting gaps in traditional cybersecurity defenses.</li></ul></a></div>
-            <div class="project-box"><a href=https://drive.google.com/file/d/1sqdE0PYetBhehfSukKqeMu96W62Y31aL/view?usp=drive_link target="_blank">Compliance Analysis: Security Breach Response Framework<ul><li>Led a comprehensive analysis of a simulated data breach scenario, evaluating violations across multiple regulatory frameworks including GDPR, HIPAA, and NYDFS.</li><li>Developed detailed compliance remediation strategies, created a structured breach notification protocol while implementing industry-standard security frameworks.</li></ul></a></div>
-            <div class="project-box"><a href=https://drive.google.com/file/d/1gG3EV_1JLATd1KdlBfeg3CMUcbPvF4kl/view?usp=drive_link target="_blank">IDOTS+: Enhancing IoTDots for Smart Environments<ul><li>Developed an IoT smart home setup to detect malicious activities using OpenHAB logs.</li><li>Achieved 89% accuracy in identifying security breaches using a CNN-based detection model.</li></ul></a></div>
-            <div class="project-box"><a href=https://drive.google.com/file/d/1lfLQrNy6t3bKabgfnp7UsNms2lYkKO60/view?usp=drive_link target="_blank">Attack and Defense Exploitable<ul><li>Built a simulated corporate infrastructure with various servers (mail, NTP, AD, Snort, web, etc.).</li><li>Led the setup of Snort for intrusion detection and actively participated in attacking and defending team networks.</li></ul></a></div>
+            <div class="project-box"><a href="https://drive.google.com/file/d/1AJzeyM8matXiRxGMdK2WwYtYiAAarlpl/view?usp=drive_link target="_blank">Enhancing Digital Twin Security Through Partial Homomorphic Encryption<ul><li>Developed a proof-of-concept using ElGamal encryption to enable privacy-preserving computation.</li><li>Secured sensitive healthcare data via encrypted computations.</li></ul></a></div>
+            <div class="project-box"><a>The Quantum Periodic Cipher: Merging Elements and Quantum Numbers for Covert Channels<ul><li>Designed a covert messaging technique using chemistry-related Reddit posts.</li><li>Embedded hidden messages by encoding quantum numbers and element symbols.</li></ul></a></div>
+            <div class="project-box"><a href="https://drive.google.com/file/d/1yoOHKvKGi3yeT50ZTKL4qKVQXu0d4wt8/view?usp=drive_link target="_blank">Impact of social engineering on Trojan Attacks<ul><li>Analyzed real-world Trojan attacks (Stuxnet, Operation Shady RAT) and the role of social engineering.</li><li>Identified patterns in phishing, USB infections, and human manipulation, highlighting gaps in traditional cybersecurity defenses.</li></ul></a></div>
+            <div class="project-box"><a href="https://drive.google.com/file/d/1sqdE0PYetBhehfSukKqeMu96W62Y31aL/view?usp=drive_link target="_blank">Compliance Analysis: Security Breach Response Framework<ul><li>Led a comprehensive analysis of a simulated data breach scenario, evaluating violations across multiple regulatory frameworks including GDPR, HIPAA, and NYDFS.</li><li>Developed detailed compliance remediation strategies, created a structured breach notification protocol while implementing industry-standard security frameworks.</li></ul></a></div>
+            <div class="project-box"><a href="https://drive.google.com/file/d/1gG3EV_1JLATd1KdlBfeg3CMUcbPvF4kl/view?usp=drive_link target="_blank">IDOTS+: Enhancing IoTDots for Smart Environments<ul><li>Developed an IoT smart home setup to detect malicious activities using OpenHAB logs.</li><li>Achieved 89% accuracy in identifying security breaches using a CNN-based detection model.</li></ul></a></div>
+            <div class="project-box"><a href="https://drive.google.com/file/d/1lfLQrNy6t3bKabgfnp7UsNms2lYkKO60/view?usp=drive_link target="_blank">Enterprise Network Attack and Defense Simulation<ul><li>Simulated an enterprise network to model attack-and-defense scenarios across multiple services(mail, NTP, AD, Snort, web, etc.).</li><li>Led the setup of Snort for intrusion detection and actively participated in attacking and defending team networks.</li></ul></a></div>
+	        <div class="project-box"><a>Forensic Recovery of Web Browser Artifacts<ul>  <li>Conducted forensic recovery of deleted and private-session browser artifacts across Chromium and Firefox environments.</li><li>Utilized Autopsy, Sleuth Kit, and NirSoft tools to reconstruct timelines and evaluate anti-forensic behavior.</li></ul></a></div>
+            <div class="project-box"><a>Post-Quantum Security eXtension Stack (PQSX)<ul><li>Building a post-quantum security stack integrating PQC-enabled OpenVPN, nftables enforcement, and Suricata monitoring.</li><li>Implementing attestation-based policy enforcement to distinguish legacy vs quantum-safe connections.</li></ul></a></div>
+
         </div>
     </div>
+
+    <div class="section" id="experience">
+        <h1>EXPERIENCE</h1>
+        <h3>Where I've applied my skills in the real world!</h3>
+<div class="exp-row">
+
+  <div class="exp-box">
+    <div class="exp-marker"></div>
+    <img class="exp-logo" src="RIT.png" alt="RIT logo" onerror="this.style.display='none'">
+
+    <h2>Teaching Assistant</h2>
+    <p class="exp-meta">RIT • Computing & Network Security • 2024 - 2025</p>
+
+    <ul>
+      <li>Guided 50+ students in applied cybersecurity, network defense, and threat analysis.</li>
+      <li>Led hands-on labs using Wireshark, Nmap, and Snort to simulate real-world investigations.</li>
+    </ul>
+    
+  </div>
+
+  <div class="exp-box exp-box-current">
+    <div class="exp-marker exp-marker-present">
+      <span class="exp-present">Present</span>
+    </div>
+    <img class="exp-logo" src="RRH.png" alt="Rochester Regional Health logo" onerror="this.style.display='none'">
+
+    <h2>Information Security Co-op</h2>
+    <p class="exp-meta">Rochester Regional Health • 2025 - Present</p>
+
+    <ul>
+      <li>Assessed security posture of 100+ third-party vendors against NIST CSF controls.</li>
+      <li>Performed risk scoring and onboarding decisions using OneTrust TPRM workflows.</li>
+      <li>Supported enterprise HIPAA audit readiness through evidence validation and control reviews.</li>
+      <li>Analyzed SOC 2, ISO 27001, penetration tests, and BitSight ratings to evaluate residual risk.</li>
+      <li>Delivered risk trend reports and security metrics to guide remediation priorities.</li>
+    </ul>
+    
+  </div>
+
+</div>
+</div>
+
     <div class="section" id="achievements">
         <h1>ACHIEVEMENTS</h1>
         <h3>A collection of certificates, hacks, and milestones!</h3>
         <div class="achievement-container">
-            <div class="achievement-box"><a href=https://drive.google.com/file/d/1nes24ev77p-ZIeFEROcSkonbdFDM0Yxq/view?usp=drive_link target="_blank">CompTIA Security+ : SY0-701</a></div>
-            <div class="achievement-box"><a href=https://drive.google.com/file/d/1Cca2_5h4QOSMOuy2IQGiqa9RctdhSX6g/view?usp=drive_link target="_blank">Google Cybersecurity Professional Certificate</a></div>
-            <div class="achievement-box"><a href=https://drive.google.com/file/d/1s9XVYdu67AzSogm2wTh8dTtDNRej1a-M/view?usp=sharing target="_blank">CyberSeed 2024<ul><li>Capture The Flag (CTF) competition organized by UCONN and Synchrony. </li><li>Ranked 23rd among 160+ teams; completed 87% of challenges.</li></ul></a></div>            
-            <div class="achievement-box"><a href=https://link.springer.com/chapter/10.1007/978-981-99-7954-7_15%20 target="_blank">Secure Software Development LifeCycle<ul><li>Presented paper in the 2nd International Conference on Computational Intelligence in Machine Learning (ICCIML) Conference and published in the Springer Journal.</li></ul></a></div>
+            <div class="achievement-box"><a href="https://drive.google.com/file/d/1nes24ev77p-ZIeFEROcSkonbdFDM0Yxq/view?usp=drive_link target="_blank">CompTIA Security+ : SY0-701</a></div>
+            <div class="achievement-box"><a href="https://drive.google.com/file/d/1Cca2_5h4QOSMOuy2IQGiqa9RctdhSX6g/view?usp=drive_link target="_blank">Google Cybersecurity Professional Certificate</a></div>
+            <div class="achievement-box"><a href="https://drive.google.com/file/d/1s9XVYdu67AzSogm2wTh8dTtDNRej1a-M/view?usp=sharing target="_blank">CyberSeed 2024<ul><li>Capture The Flag (CTF) competition organized by UCONN and Synchrony. </li><li>Ranked 23rd among 160+ teams; completed 87% of challenges.</li></ul></a></div>            
+            <div class="achievement-box"><a href="https://link.springer.com/chapter/10.1007/978-981-99-7954-7_15%20 target="_blank">Secure Software Development LifeCycle<ul><li>Presented paper in the 2nd International Conference on Computational Intelligence in Machine Learning (ICCIML) Conference and published in the Springer Journal.</li></ul></a></div>
+            <div class="achievement-box"><a>eJPT: INE's Junior Penetration Tester Certification - (InProgress)</a></div>
         </div>
+
         <section id="skills" class="section">
             <h1>SKILLS</h1>
             <h3>From fundamentals to finesse - here's what I bring to the table!</h3>
             <div class="skills-grid-top">
               <div class="skill-box">
                 <a href="#">
-                  <h3>Tools</h3>
+                  Tools
                   <ul>
                     <li>Metasploit</li>
                     <li>Wireshark</li>
@@ -484,14 +664,16 @@
           
               <div class="skill-box">
                 <a href="#">
-                  <h3>Technical Interests</h3>
+                  Security Domains
                   <ul>
                     <li>Vulnerability Assessment</li>
                     <li>Risk Assessment</li>
                     <li>Identity and Access Management</li>
-                    <li>Network Security</li>
+                    <li>Network Security Monitoring</li>
                     <li>Incident Response</li>
-                    <li>Governance, Risk and Compliance</li>
+                    <li>Third-Party Risk</li>
+                    <li>Regulatory Compliance (HIPAA, PCI)</li>
+                    <li>Threat Detection</li>
                   </ul>
                 </a>
               </div>
@@ -499,7 +681,7 @@
           
             <div class="skill-box center-box">
               <a href="#">
-                <h3>Languages</h3>
+                Programming Languages & scripting
                 <ul>
                   <li>Java</li>
                   <li>Python</li>
@@ -543,10 +725,7 @@
 
 
         
-        <!-- Footer Section -->
-        <footer class="footer">
-            © 2025 Sree Alekhya Teerthala. All rights reserved. 
-        </footer>
+
 <script>
     function displayAnswer() {
         const answerDiv = document.getElementById('answer');
@@ -557,7 +736,7 @@
         } else if (selectedQuestion === 'movie') {
             answerDiv.textContent = "Anything that brings good vibes! 😊";  
         } else if (selectedQuestion === 'food') {
-            answerDiv.textContent = "As long as it’s veg and delicious, count me in! 😉";  
+            answerDiv.textContent = "As long as it's veg and delicious, count me in! 😉";  
         } else {
             answerDiv.textContent = '';  
         }
@@ -566,7 +745,7 @@
 
     <script>
 
-        const words = ["A Security Engineer!", "CTRL + ALT + DEFEND!", " A Cybersecurity Grad!"];
+        const words = ["Security Engineer!", "CTRL + ALT + DEFEND!", "Cybersecurity Grad!"];
         let wordIndex = 0;
         let charIndex = 0;
         let typingElement = document.getElementById("dynamic-text");
@@ -594,5 +773,9 @@
         
         typeEffect();
     </script>
+            <!-- Footer Section -->
+        <footer class="footer">
+            © 2025 Sree Alekhya Teerthala. All rights reserved. 
+        </footer>
 </body>
 </html>
